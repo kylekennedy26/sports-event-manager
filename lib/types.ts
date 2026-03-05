@@ -23,3 +23,18 @@ export type ActionResponse<T = void> = {
   data?: T;
   error?: string;
 };
+
+export const SPORT_TYPES = [
+  "Soccer",
+  "Basketball",
+  "Tennis",
+  "Baseball",
+  "Football",
+  "Hockey",
+  "Golf",
+  "Volleyball",
+  "Rugby",
+  "Cricket",
+] as const;
+
+export type SportType = (typeof SPORT_TYPES)[number];
